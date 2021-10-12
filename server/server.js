@@ -5,6 +5,7 @@ const cors = require('cors');
 const fileUpload = require('express-fileupload');
 const cookieParser = require('cookie-parser');
 const userRouter = require('./routes/userRouter');
+const categoryRouter = require('./routes/categoryRouter');
 
 const app = express();
 app.use(express.json());
@@ -15,6 +16,7 @@ app.use(fileUpload({
 }));
 //Router
 app.use('/user', userRouter);
+app.use('/api', categoryRouter);
 
 //Connect to mongodb 
  const URI = process.env.MONGODB_URL;
