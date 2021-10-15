@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser');
 const userRouter = require('./routes/userRouter');
 const categoryRouter = require('./routes/categoryRouter');
 const upload = require('./routes/upload');
+const productRouter = require('./routes/productRouter');
 
 const app = express();
 app.use(express.json());
@@ -19,6 +20,7 @@ app.use(fileUpload({
 app.use('/user', userRouter);
 app.use('/api', categoryRouter);
 app.use('/api', upload);
+app.use('/api', productRouter);
 
 //Connect to mongodb 
  const URI = process.env.MONGODB_URL;
