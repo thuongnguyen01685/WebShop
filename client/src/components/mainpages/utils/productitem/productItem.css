@@ -24,3 +24,44 @@
     cursor: pointer;
     color: #323232;
 }
+
+.product_card span {
+    color: crimson;
+}
+
+.product_box p {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    height: 70px;
+    overflow: hidden;
+    color: #323232;
+}
+
+.row_btn {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row_btn a {
+    width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 6px;
+}
+
+#btn_buy {
+    background: #555;
+    margin-right: 5px;
+}
+
+#btn_view {
+    background: teal;
+    margin-left: 5px;
+}

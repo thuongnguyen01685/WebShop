@@ -4,7 +4,7 @@ import ProductItem from '../utils/productitem/ProductItem';
 
 export default function Products() {
     const state = useContext(GlobalState);
-    const [products] = state.ProductsAPI.products;
+    const [products] = state.productsAPI.products;
     console.log(state);
     return (
         <div className="products">{

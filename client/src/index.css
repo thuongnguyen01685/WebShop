@@ -42,3 +42,7 @@ button {
 /*-------main -> product --------*/
 
 @import url("./components/mainpages/products/product.css");
+
+/*-------main -> detail product --------*/
+
+@import url("./components/mainpages/detailProduct/detailProduct.css");
