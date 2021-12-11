@@ -8,6 +8,7 @@ import Cart from "./cart/Cart";
 import NotFound from "./utils/not_found/NotFound";
 import { useContext } from "react";
 import { GlobalState } from "../../GlobalState";
+import OrderHistory from "./history/OrderHistory";
 
 export default function Page() {
   const state = useContext(GlobalState);
@@ -23,6 +24,11 @@ export default function Page() {
         path="/register"
         exact
         component={isLogged ? NotFound : Register}
+      />
+      <Route
+        path="/history"
+        exact
+        component={isLogged ? OrderHistory : NotFound}
       />
       <Route path="/cart" exact component={Cart} />
 
