@@ -32,16 +32,19 @@
 .product_box p {
     width: 100%;
     display: -webkit-box;
-    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    line-height: 25px;
     -webkit-line-clamp: 3;
-    height: 70px;
+    height: 75px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    height: 80px;
     overflow: hidden;
     color: #323232;
 }
 
 .row_btn {
     width: 100%;
-    margin-top: 10px;
     display: flex;
     justify-content: space-between;
 }
@@ -64,4 +67,10 @@
 #btn_view {
     background: teal;
     margin-left: 5px;
+}
+
+.product_card input {
+    position: absolute;
+    width: 20px;
+    height: 20px;
 }

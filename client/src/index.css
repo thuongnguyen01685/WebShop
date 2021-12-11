@@ -15,7 +15,7 @@ code {
     max-width: 1230px;
     min-height: 100vh;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
     box-shadow: 0 0 35px #eee;
 }
 
@@ -46,3 +46,11 @@ button {
 /*-------main -> detail product --------*/
 
 @import url("./components/mainpages/detailProduct/detailProduct.css");
+
+/*---------------Login---------------*/
+
+@import url("./components/mainpages/auth/login.css");
+
+/*---------------Cart---------------*/
+
+@import url("./components/mainpages/cart/Cart.css");
