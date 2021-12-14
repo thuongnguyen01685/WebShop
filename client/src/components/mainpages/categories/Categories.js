@@ -5,7 +5,7 @@ import { GlobalState } from "../../../GlobalState";
 
 export default function Categories() {
   const state = useContext(GlobalState);
-  const [categories, setCategories] = state.categoriesAPI.categories;
+  const [categories] = state.categoriesAPI.categories;
   const [category, setCategory] = useState("");
   const [token] = state.token;
   const [callback, setCallback] = state.categoriesAPI.callback;
@@ -72,7 +72,7 @@ export default function Categories() {
           onChange={(e) => setCategory(e.target.value)}
         />
 
-        <button type="submit">{onEdit ? "Update" : "Save"}</button>
+        <button type="submit">{onEdit ? "Update" : "Create"}</button>
       </form>
       <div className="col">
         {categories.map((category) => (

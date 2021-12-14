@@ -49,3 +49,27 @@
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
+.rowPrice {
+    padding: 0.3125rem 0 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.through {
+    color: rgba(0, 0, 0, .54);
+    text-decoration: line-through;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.teal {
+    font-size: 20px;
+    color: teal;
+}
+
+.teall {
+    font-size: 24px;
+    color: teal;
+}

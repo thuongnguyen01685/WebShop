@@ -29,7 +29,13 @@ export default function DetailProduct() {
             <h2>{detailProduct.title}</h2>
             <h6>#id: {detailProduct.product_id}</h6>
           </div>
-          <span>{detailProduct.price}₫</span>
+          <div className="rowPrice">
+            <div className="through">${detailProduct.price * 1.3}</div>
+            <div className="tealPrice">
+              <span className="teal">$</span>
+              <span className="teall">{detailProduct.price}</span>
+            </div>
+          </div>
           <p>{detailProduct.description}</p>
           <p>{detailProduct.content}</p>
           <p>Sold: {detailProduct.sold}</p>
@@ -45,7 +51,8 @@ export default function DetailProduct() {
         <h2>Related products</h2>
         <div className="products">
           {products.map((product) => {
-            return product.category === detailProduct.category ? (
+            return product.category === detailProduct.category &&
+              product._id !== params.id ? (
               <ProductItem key={product._id} product={product} />
             ) : null;
           })}
