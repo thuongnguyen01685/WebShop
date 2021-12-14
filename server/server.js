@@ -9,6 +9,7 @@ const categoryRouter = require("./routes/categoryRouter");
 const upload = require("./routes/upload");
 const productRouter = require("./routes/productRouter");
 const paymentRouter = require("./routes/paymentRouter");
+const path = require("path");
 
 const app = express();
 app.use(express.json());
@@ -46,6 +47,13 @@ mongoose.connect(
 app.get("/", (req, res) => {
   res.json({ msg: " Hello word" });
 });
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
+}
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

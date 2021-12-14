@@ -12,6 +12,7 @@ export default function Header() {
   const [isLogged, setIsLogged] = state.userAPI.isLogged;
   const [isAdmin, setIsAdmin] = state.userAPI.isAdmin;
   const [cart] = state.userAPI.cart;
+  const [menu, setMenu] = useState(false);
 
   console.log(state);
 
@@ -47,9 +48,13 @@ export default function Header() {
       </>
     );
   };
+
+  const styleMenu = {
+    left: menu ? 0 : "-100%",
+  };
   return (
     <header>
-      <div className="menu">
+      <div className="menu" onClick={() => setMenu(!menu)}>
         <img src={Menu} alt="" width="30" />
       </div>
       <div className="logo">
@@ -57,7 +62,7 @@ export default function Header() {
           <Link to="/">{isAdmin ? "Admin" : "AoDo Shop"}</Link>
         </h1>
       </div>
-      <ul>
+      <ul style={styleMenu}>
         <li>
           <Link to="/">{isAdmin ? "Products" : "Shop"}</Link>
         </li>
@@ -70,7 +75,7 @@ export default function Header() {
           </li>
         )}
 
-        <li>
+        <li onClick={() => setMenu(!menu)}>
           <img src={Close} alt="" className="menu" width="30" />
         </li>
       </ul>
