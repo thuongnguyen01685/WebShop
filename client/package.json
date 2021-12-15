@@ -39,5 +39,5 @@
         ]
     },
 
-    "proxy": "https://serverDoan.thngnguyn44.repl.co"
+    "proxy": "http://localhost:5000"
 }
