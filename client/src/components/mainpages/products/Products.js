@@ -5,6 +5,7 @@ import Loading from "../utils/loading/Loading";
 import axios from "axios";
 import Filter from "./Filter";
 import LoadMore from "./LoadMore";
+import Carou from "./Carou";
 
 export default function Products() {
   const state = useContext(GlobalState);
@@ -63,6 +64,7 @@ export default function Products() {
     );
   return (
     <>
+      <Carou />
       <Filter />
       {isAdmin ? (
         <div className="delete-all">

@@ -144,3 +144,8 @@ button {
         margin: 20px 0;
     }
 }
+
+
+/*------------footter-----------*/
+
+@import url("./components/footter/footter.css");

@@ -1,20 +1,21 @@
-import {BrowserRouter as Router} from 'react-router-dom';
-import {DataProvider} from './GlobalState';
-import Header from './components/headers/Header';
+import { BrowserRouter as Router } from "react-router-dom";
+import { DataProvider } from "./GlobalState";
+import Header from "./components/headers/Header";
 
-import MainPages from './components/mainpages/Pages';
+import MainPages from "./components/mainpages/Pages";
+import Footter from "./components/footter/Footter";
 
 function App() {
   return (
     <DataProvider>
       <Router>
         <div className="App">
-          <Header/>
-          <MainPages/>
+          <Header />
+          <MainPages />
+          <Footter />
         </div>
       </Router>
     </DataProvider>
-    
   );
 }
 
