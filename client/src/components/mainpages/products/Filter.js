@@ -32,13 +32,13 @@ export default function Filter() {
         onChange={(e) => setSearch(e.target.value.toLowerCase())}
       />
       <div className="row sort">
-        <span>Sort By : </span>
+        <span>Sort By: </span>
         <select value={sort} onChange={(e) => setSort(e.target.value)}>
-          <option value="">Newsest</option>
+          <option value="">Newest</option>
           <option value="sort=oldest">Oldest</option>
           <option value="sort=-sold">Best sales</option>
-          <option value="sort=-price">Price: Hight to Low</option>
-          <option value="sort=price">Price: Low to Hight</option>
+          <option value="sort=-price">Price: Hight-Low</option>
+          <option value="sort=price">Price: Low-Hight</option>
         </select>
       </div>
     </div>
