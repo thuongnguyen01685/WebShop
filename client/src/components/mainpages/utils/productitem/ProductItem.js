@@ -19,7 +19,15 @@ export default function ProductItem({
       <img src={product.images.url} alt="" />
       <div className="product_box">
         <h2 title={product.title}>{product.title}</h2>
-        <span>${product.price}</span>
+        <div className="rowPrice">
+          <div className="through">
+            ${parseFloat(product.price * 1.3).toFixed(2)}
+          </div>
+          <div className="tealPrice">
+            <span className="teal">$</span>
+            <span className="teall">{product.price}</span>
+          </div>
+        </div>
         <p>{product.description}</p>
       </div>
       <BtnRender product={product} deleteProduct={deleteProduct} />
